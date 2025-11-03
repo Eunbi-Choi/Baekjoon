@@ -28,6 +28,13 @@ public class Main {
             list.add(new Point(x, y));
         }
 
+        /* 비교 결과 리턴값의 의미
+            음수 ( < 0 ) -> p1이 p2보다 앞에 옴
+            0 -> 두 객체가 동일한 순서
+            양수 ( < 0 ) -> p1이 p2보다 뒤에 옴
+
+            y가 작은 순서 -> 같으면 x가 작은 순서로 정렬하라
+        */
         list.sort((p1, p2) -> {
             if(p1.y == p2.y) return p1.x - p2.x;
             return p1.y - p2.y;
